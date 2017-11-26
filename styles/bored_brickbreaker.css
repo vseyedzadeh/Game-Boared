@@ -1,0 +1,27 @@
+ @charset:"utf-8";
+
+ 
+#gameTitle {
+    text-align: center;
+    margin: 20px 0 10px;
+}
+#rightKey{
+    transform: rotate(180deg);
+}
+
+#moveRules{
+    text-align: center;
+    font-size: 14pt;
+}
+
+ #myCanvas {
+   width: 50%;
+    margin-left: 25%;
+    margin-right: auto;
+    background-image: url(../images/radpack_7.jpg);
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+     

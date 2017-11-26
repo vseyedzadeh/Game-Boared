@@ -1,0 +1,145 @@
+ @charset:"utf-8";
+
+ html, body {
+            width:100%;
+            position: static;
+        }
+        .flex-container {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            flex-flow: row wrap;
+            text-align: center;
+            font-family: 'Hind Guntur', sans-serif;
+            background-image: url(../images/banner.jpg);
+            position: absolute;
+            height:100%;
+            
+        }
+
+            .flex-container > * {
+                padding: 5px;
+                -webkit-flex: 1 100%;
+                flex: 1 100%;
+                
+            }
+
+        section {
+            text-align: left;
+            border: 3px solid white;
+            background: #3CDBD3;
+            vertical-align:middle;
+
+        }
+        article {
+            text-align: left;
+            color: white;
+            border: 3px solid white;
+            background: #FF4444;
+            text-align:left;
+            font-size:16px;
+        }
+
+        header {
+            width: 100%;
+            /*background: #439EB5;*/
+            /*background-image:url(images/banner.jpg);*/
+            text-align: left;
+            color: darkslategrey;
+            height: auto;
+            line-height: 1px;
+            font-size: 50px;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            border: 3px solid white;
+        }
+
+        h1{
+            margin-left: 30px;
+           padding-top: 30px;
+        }
+
+        footer {
+            /*background: #265499;*/
+            background-image:url(../images/banner.jpg);
+            color: antiquewhite;
+            text-align: center;
+            border: 3px solid white;
+        }
+
+        .nav {
+            background: #265499;
+            height: auto;
+            padding: 1px;
+            border: 3px solid white;
+            text-align: center;
+
+        }
+
+            .nav ul {
+                list-style-type: none;
+                padding: 0;
+                
+            }
+
+            .nav ul li {
+                font-size: 30px;
+                list-style-type: none;
+                display:inline;
+                padding-right: 50px;
+            }
+                .nav ul a {
+                    text-decoration: none;
+                    color: antiquewhite;
+                    text-align:center;
+
+                }
+
+
+
+#gameTitle {
+    text-align: center;
+    margin: 20px 0 10px;
+}
+#rightKey{
+    transform: rotate(180deg);
+}
+
+#moveRules{
+    text-align: center;
+    font-size: 14pt;
+}
+
+ #myCanvas {
+   width: 50%;
+    margin-left: 25%;
+    margin-right: auto;
+    background-image: url(../images/radpack_7.jpg);
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+     
+        @media all and (min-width: 768px) {
+            
+
+            .section {
+                -webkit-flex: 5 0px;
+                flex: 5 0px;
+                -webkit-order: 2;
+                order: 2;
+            }
+           
+            .article {
+                -webkit-flex: 2 0px;
+                flex: 2 0px;
+                -webkit-order: 3;
+                order: 3;
+            }
+            footer {
+                -webkit-order: 4;
+                order: 4;
+            }
+           
+        }

@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<!-- Prepared by Miguel Legault 8547102 June 4, 2017 -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>bGame | Memory Game</title>
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Hind+Guntur" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="styles/MemoryGame.css" />
+
+</head>
+<body>
+    <div class="flex-container">
+        <header>
+            <h1 class="dotdotdot">Böred</h1>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                 <li><a href="Index.html">Home</a></li>
+                <li><a href="MemoryGame.html">MemoryGame</a></li>
+                <li><a href="brickbreaker.html">Brickbreaker</a></li>
+                <li><a href="hangMan.html">Hangman</a></li>
+                <li><a href="draggit.html">Draggit</a></li>
+                
+            </ul>
+        </nav>
+        <section class="section">
+            <!-- What follows is imported from codepen to get started
+                original pen: https://codepen.io/natewiley/pen/HBrbL
+                -->
+            <h2 style="margin:0;pading:0;">Memory</h2>
+            <div class="wrap">
+                <div class="game"></div>
+
+                <div class="modal-overlay">
+                    <div class="modal">
+                        <h2 class="winner">You Rock!</h2>
+                        <button class="restart">Play Again?</button>
+                        <p class="message">Developed on <a href="https://codepen.io">CodePen</a> by <a href="https://codepen.io/natewiley">Nate Wiley</a></p>
+                        <p class="share-text">Share it?</p>
+                    </div>
+                    <div id="settingsModal">
+                        <form action="#" novalidate="novalidate">
+                            <label for="levelRadio">Level of difficulty<br /></label>
+                            <input type="radio" name="levelRadio" value="easyLevel" />Easy
+                            <input type="radio" name="levelRadio" value="mediumLevel" />Medium
+                            <input type="radio" name="levelRadio" value="difficultLevel" />Difficult<br />
+                            <label for="collectionRadio">Card Collection<br /></label>
+                            <input type="radio" name="collectionRadio" value="cardCollection1" checked="checked" />Animals
+                            <input type="radio" name="collectionRadio" value="cardCollection2" />HTML5<br />
+                            <button id="settingsDone" type="button">Restart with new settings</button><br />
+                            <button id="abandonNewSettings" type="button">Abandon changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div><!-- End Wrap -->
+        </section>
+        <article class="article">
+
+            <h2>Memory...( ) Rules:</h2>
+            <p>
+                Try to find all the matching pairs of cards.
+            </p>
+            <p>
+                Click on cards to reveal their faces. You'll be able to see 2 cards at a time.
+            </p>
+            <p>
+                If you click 2 matching cards, they'll remained turned. If the cards you clicked don't match, they'll be once again placed face down. Try to remember where they are!
+            </p>
+            <p>
+                The game ends once you've found all the matched pairs.
+            </p>
+            <p>
+                Good luck !
+            </p>
+            <button id="newGame">New Game</button><button id="gameSettings">Game Settings</button>
+        </article>
+
+        <footer id="footer">
+        
+        <ul>                            
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="contact_us.html">Contact us</a></li>
+                <li><a href="references.html">references</a></li>
+            </ul>
+            <br>
+        Copyright 2017, Javascript Team Project
+            
+        </footer>
+    </div>
+    <script type="text/javascript" src="scripts/codePenMemoryGame.js"></script>
+</body>
+</html>

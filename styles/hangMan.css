@@ -1,0 +1,17 @@
+#displayWord{
+  cursor:no-drop; 
+  width:200px; 
+  font-size:18px;
+}
+#usedLetters{
+  cursor:no-drop; 
+  width:200px; 
+  font-size:15px; 
+  opacity: 0.8;
+}
+#button{
+  cursor:pointer; 
+  margin-left: 10px; 
+  font-size:18px;
+  margin: 20px;
+}

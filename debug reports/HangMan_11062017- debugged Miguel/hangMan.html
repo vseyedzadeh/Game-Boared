@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta name="description" content="Hangman is a PC-Game, which is written in HTML and JavaScript">
+        <meta name="keywords" content="Game, Hangman, Streich, Stroke, JavaScript">
+		<title></title>
+		<script type="text/javascript" src="script/hangMan.js"></script>
+		<link type="text/css" rel="stylesheet" href="style/hangMan.css" />
+		<link href="https://fonts.googleapis.com/css?family=Hind+Guntur" rel="stylesheet">
+	</head>
+	<body onLoad="reset(); return true;">
+
+	<div class="flex-container">
+        <header>
+            <h1>Böred...( )</h1>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Höme...( )</a></li>
+                <li><a href="#">Histöry...( )</a></li>
+                <li><a href="#">Learning...( )</a></li>
+                <li><a href="#">Aböut...( )</a></li>
+                <li><a href="#">Cöntact us...( )</a></li>
+            </ul>
+        </nav>
+        <section class="section">
+		
+		<center>		
+		<div style="float: right; width: 40%;">
+			<img src="images/hangman0.gif"  name="hm">
+		</div>
+		<div style="float: left; width: 60%;">
+		<form name="game">
+			<div>
+			    <br />
+				Display Word: &nbsp;&nbsp;&nbsp;<input type="text" style="cursor:no-drop; width:200px; font-size:18px;" name="displayWord" disabled />
+				<br />
+				Used Letters: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" style="cursor:no-drop; width:200px; font-size:15px; opacity: 0.8;" name="usedLetters" disabled />
+			</div>	
+		    <div>
+			<br />
+			<label>Choose a letter:</label>
+			
+			
+			<br />
+			
+			<input type="button" onClick="selectLetter('Q')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="Q" value="Q">
+			<input type="button" onClick="selectLetter('W')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="W" value="W">
+			<input type="button" onClick="selectLetter('E')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="E" value="E">
+			<input type="button" onClick="selectLetter('R')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="R" value="R">
+			<input type="button" onClick="selectLetter('T')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="T" value="T">
+			<input type="button" onClick="selectLetter('Y')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="Y" value="Y">
+			<input type="button" onClick="selectLetter('U')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="U" value="U">
+			<input type="button" onClick="selectLetter('I')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="I" value="I">
+			<input type="button" onClick="selectLetter('O')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="O" value="O">
+			<input type="button" onClick="selectLetter('P')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="P" value="P">
+			<br />
+			<br />
+			<input type="button" onClick="selectLetter('A')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="A" value="A">
+			<input type="button" onClick="selectLetter('S')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="S" value="S">
+			<input type="button" onClick="selectLetter('D')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="D" value="D">
+			<input type="button" onClick="selectLetter('F')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="F" value="F">
+			<input type="button" onClick="selectLetter('G')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="G" value="G">
+			<input type="button" onClick="selectLetter('H')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="H" value="H">
+			<input type="button" onClick="selectLetter('J')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="J" value="J">
+			<input type="button" onClick="selectLetter('K')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="K" value="K">
+			<input type="button" onClick="selectLetter('L')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="L" value="L">
+			<br />
+			<br />
+			<input type="button" onClick="selectLetter('Z')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="Z" value="Z">
+			<input type="button" onClick="selectLetter('X')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="X" value="X">
+			<input type="button" onClick="selectLetter('C')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="C" value="C">
+			<input type="button" onClick="selectLetter('V')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="V" value="V">
+			<input type="button" onClick="selectLetter('B')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="B" value="B">
+			<input type="button" onClick="selectLetter('N')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="N" value="N">
+			<input type="button" onClick="selectLetter('M')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="M" value="M">
+			
+		</div>
+		</form>
+		</div>
+		<br />
+		
+		<div>
+			<a href="javascript:reset()"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="Start game / Reset game"></a>
+		</div>
+		</center>
+		 </section>
+        <article class="article">
+            
+            <h2>Böred...( ) Rules:</h2>
+            <p>
+                Take a look at the pictures...there is one picture that it's not the same!!
+            </p>
+            <p>
+                Try to find the different picture, click on it and hold the button down...then drag it and drop it on the empty container below. Good luck!
+            </p>
+            
+            <div id='drop'>drag it here!</div>
+        </article>
+       
+        <footer>Copyright 2017, Javascript Team Project</footer>
+    </div>
+	</body>
+</html>

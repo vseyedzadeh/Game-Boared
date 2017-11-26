@@ -1,0 +1,121 @@
+<!-- Prepared by Vajihe Seyedzadeh 8547102 June 4, 2017 -->
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8" />
+	    <meta name="description" content="Hangman is a PC-Game, which is written in HTML and JavaScript">
+        <meta name="keywords" content="Game, Hangman, Streich, Stroke, JavaScript">
+		<title>bGame | Hnagman</title>
+		<script type="text/javascript" src="scripts/hangMan.js"></script>
+		<link type="text/css" rel="stylesheet" href="styles/main.css" />
+		<link type="text/css" rel="stylesheet" href="styles/hangMan.css" />
+		<link href="https://fonts.googleapis.com/css?family=Hind+Guntur" rel="stylesheet">
+	</head>
+	<body onLoad="reset(); return true;">
+
+	<div class="flex-container">
+        <header>
+            <h1>Böred</h1>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                 <li><a href="Index.html">Home</a></li>
+                <li><a href="MemoryGame.html">MemoryGame</a></li>
+                <li><a href="brickbreaker.html">Brickbreaker</a></li>
+                <li><a href="hangMan.html">Hangman</a></li>
+                <li><a href="draggit.html">Draggit</a></li>
+                
+            </ul>
+        </nav>
+        <section class="section">
+		
+		<center>		
+		<div style="float: right; width: 50%;">
+		<br>
+			<img src="images/hangman0.gif"  name="hm">
+		</div>
+		<div style="float: left; width: 50%;">
+		<form name="game">
+			<div>
+			    <br />
+				Display Word: &nbsp;&nbsp;&nbsp;<input type="text" id="displayWord" name="displayWord" disabled />
+				<br /><br />
+				Used Letters: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="usedLetters" name="usedLetters" disabled />
+			</div>	
+		    <div>
+			<br />
+			<label>Choose a letter:</label>
+			
+			
+			<br />
+			<br />
+			
+			<input type="button" onClick="selectLetter('Q')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="Q" value="Q">
+			<input type="button" onClick="selectLetter('W')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="W" value="W">
+			<input type="button" onClick="selectLetter('E')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="E" value="E">
+			<input type="button" onClick="selectLetter('R')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="R" value="R">
+			<input type="button" onClick="selectLetter('T')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="T" value="T">
+			<input type="button" onClick="selectLetter('Y')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="Y" value="Y">
+			<input type="button" onClick="selectLetter('U')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="U" value="U">
+			<input type="button" onClick="selectLetter('I')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="I" value="I">
+			<input type="button" onClick="selectLetter('O')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="O" value="O">
+			<input type="button" onClick="selectLetter('P')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="P" value="P">
+			<br />
+			<br />
+			<input type="button" onClick="selectLetter('A')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="A" value="A">
+			<input type="button" onClick="selectLetter('S')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="S" value="S">
+			<input type="button" onClick="selectLetter('D')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="D" value="D">
+			<input type="button" onClick="selectLetter('F')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="F" value="F">
+			<input type="button" onClick="selectLetter('G')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="G" value="G">
+			<input type="button" onClick="selectLetter('H')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="H" value="H">
+			<input type="button" onClick="selectLetter('J')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="J" value="J">
+			<input type="button" onClick="selectLetter('K')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="K" value="K">
+			<input type="button" onClick="selectLetter('L')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="L" value="L">
+			<br />
+			<br />
+			<input type="button" onClick="selectLetter('Z')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="Z" value="Z">
+			<input type="button" onClick="selectLetter('X')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="X" value="X">
+			<input type="button" onClick="selectLetter('C')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="C" value="C">
+			<input type="button" onClick="selectLetter('V')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="V" value="V">
+			<input type="button" onClick="selectLetter('B')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="B" value="B">
+			<input type="button" onClick="selectLetter('N')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="N" value="N">
+			<input type="button" onClick="selectLetter('M')" style="cursor:pointer; margin-left: 10px; font-size:18px;" name="M" value="M">
+			
+		</div>
+		</form>
+		</div>		
+		<div>		
+			<a href="javascript:reset()"><input type="button" id="button" value="Start game / Reset game"></a>
+		</div>
+		</center>
+		 </section>
+        <article class="article">
+            
+            <h2>Hangman Rules:</h2>
+            <p>
+                Guess the word!!! There is a blank line for each letter in the word.
+            </p>
+            <p>
+                Start guessing letters and click on them. If you guess right letter it will show in the blank line, otherwise
+                it will show in the used letter box and it shows also one part of a man's figure who is being hung.
+                GoosLuck!!!!
+            </p>
+            
+            
+        </article>
+       
+        <footer id="footer">
+        
+        <ul>                            
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="contact_us.html">Contact us</a></li>
+                <li><a href="references.html">references</a></li>
+            </ul>
+            <br>
+        Copyright 2017, Javascript Team Project
+            
+        </footer>
+    </div>
+	</body>
+</html>
